@@ -4,23 +4,23 @@ import pandas as pd
 
 @st.cache
 def get_data():
-    return pd.read_csv('https://raw.githubusercontent.com/cmu-healthanalytics2022/TEMP/main/gdp.csv')
+    return pd.read_csv('https://raw.githubusercontent.com/cmu-healthanalytics2022/TEMP/main/Medicare_DUALS_SJTB_COVID_v1.csv')
 
 
-'# World GDP'
+'# Medicare Dual Benes in St John The Baptist Parish'
 
 df = get_data()
 
-min_year = int(df['Year'].min())
-max_year = int(df['Year'].max())
+min_LOS = int(df['Length of Stay'].min())
+max_LOS = int(df['Length of Stay'].max())
 
-countries = df['Country Name'].unique()
+diagnosis = df['CCS Diagnosis Description'].unique()
 
-'## By country'
-country = st.selectbox('Country', countries)
-df[df['Country Name'] == country]
+'## By Diagnosis'
+diagn = st.selectbox('Diagn', diagnosis)
+df[df['CCS Diagnosis Description'] == diagn]
 
 
-'## By year'
-year = st.slider('Year', min_year, max_year)
-df[df['Year'] == year]
+'## By LOS'
+LOS = st.slider('Length of Stay', min_LOS, max_LOS)
+df[df['Length of Stay'] == LOS]
