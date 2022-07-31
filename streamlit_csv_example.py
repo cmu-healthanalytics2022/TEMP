@@ -4,7 +4,7 @@ import pandas as pd
 
 @st.cache
 def get_data():
-    return pd.read_csv('https://datahub.io/core/gdp/r/gdp.csv')
+    return pd.read_csv('https://raw.githubusercontent.com/cmu-healthanalytics2022/TEMP/main/gdp.csv')
 
 
 '# World GDP'
