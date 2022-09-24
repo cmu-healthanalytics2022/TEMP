@@ -1,8 +1,6 @@
 # %%
 import pandas as pd
 import streamlit as st
-#import graphs
-#import eda
 import matplotlib.pyplot as plt
 import os
 
