@@ -1,11 +1,10 @@
 # %%
 import pandas as pd
 import streamlit as st
-import graphs
-import eda
+#import graphs
+#import eda
 import matplotlib.pyplot as plt
 import os
-
 
 import requests
 # Save datagenerators as file to colab working directory
